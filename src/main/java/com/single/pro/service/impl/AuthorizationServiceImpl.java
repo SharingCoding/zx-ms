@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author SiZhongxia
- * @since 2018-01-08
+ * @since 2018-01-25
  */
 @Service
 public class AuthorizationServiceImpl extends ServiceImpl<AuthorizationDao, Authorization> implements AuthorizationService {

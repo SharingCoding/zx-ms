@@ -1,8 +1,6 @@
 package com.single.pro.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
-import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
@@ -13,7 +11,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author SiZhongxia
- * @since 2018-01-08
+ * @since 2018-01-25
  */
 @TableName("sp_application")
 public class Application implements Serializable {
@@ -23,8 +21,7 @@ public class Application implements Serializable {
     /**
      * 主键
      */
-	@TableId(value="id", type= IdType.AUTO)
-	private Integer id;
+	private Long id;
     /**
      * 网站标题
      */
@@ -58,11 +55,11 @@ public class Application implements Serializable {
 	private Date updateTime;
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

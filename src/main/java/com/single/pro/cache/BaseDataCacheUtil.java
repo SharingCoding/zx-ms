@@ -56,7 +56,7 @@ public class BaseDataCacheUtil implements InitializingBean {
 		}
 		for (Map<String, Object> root : roots) {
 			for (Menu menu : menus) {
-				if (new Integer(root.get("id").toString()).equals(menu.getParentId())) {
+				if (new Long(root.get("id").toString()).equals(menu.getParentId())) {
 					List<Map<String, Object>> childs = (List<Map<String, Object>>) root.get("childs");
 					childs.add(menuObj2Map(menu, false));
 				}

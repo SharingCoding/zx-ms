@@ -1,8 +1,6 @@
 package com.single.pro.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
-import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
@@ -13,7 +11,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author SiZhongxia
- * @since 2018-01-08
+ * @since 2018-01-25
  */
 @TableName("sp_role_authorization")
 public class RoleAuthorization implements Serializable {
@@ -23,18 +21,17 @@ public class RoleAuthorization implements Serializable {
     /**
      * 主键
      */
-	@TableId(value="id", type= IdType.AUTO)
-	private Integer id;
+	private Long id;
     /**
      * 角色ID
      */
 	@TableField("role_id")
-	private Integer roleId;
+	private Long roleId;
     /**
      * 权限关联
      */
 	@TableField("authword_id")
-	private Integer authwordId;
+	private Long authwordId;
     /**
      * 创建时间
      */
@@ -42,27 +39,27 @@ public class RoleAuthorization implements Serializable {
 	private Date createTime;
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public Integer getRoleId() {
+	public Long getRoleId() {
 		return roleId;
 	}
 
-	public void setRoleId(Integer roleId) {
+	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
 	}
 
-	public Integer getAuthwordId() {
+	public Long getAuthwordId() {
 		return authwordId;
 	}
 
-	public void setAuthwordId(Integer authwordId) {
+	public void setAuthwordId(Long authwordId) {
 		this.authwordId = authwordId;
 	}
 

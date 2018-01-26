@@ -66,7 +66,7 @@ public class JDBCRealm extends AuthorizingRealm {
 			List<RoleAuthorization> roleAuths = roleAuthorizationService.selectList(wrapper);
 
 			if (roleAuths != null && !roleAuths.isEmpty()) {
-				List<Integer> authIds = new ArrayList<>();
+				List<Long> authIds = new ArrayList<>();
 				for (RoleAuthorization ra : roleAuths) {
 					authIds.add(ra.getAuthwordId());
 				}

@@ -13,7 +13,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author SiZhongxia
- * @since 2018-01-08
+ * @since 2018-01-25
  */
 @TableName("sp_user")
 public class User implements Serializable {
@@ -24,7 +24,7 @@ public class User implements Serializable {
      * 主键
      */
 	@TableId(value="id", type= IdType.AUTO)
-	private Integer id;
+	private Long id;
     /**
      * 用户名称
      */
@@ -33,7 +33,7 @@ public class User implements Serializable {
      * 关联角色
      */
 	@TableField("role_id")
-	private Integer roleId;
+	private Long roleId;
     /**
      * 登录名称（唯一）
      */
@@ -73,11 +73,11 @@ public class User implements Serializable {
 	private Date lastLoginTime;
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -89,11 +89,11 @@ public class User implements Serializable {
 		this.name = name;
 	}
 
-	public Integer getRoleId() {
+	public Long getRoleId() {
 		return roleId;
 	}
 
-	public void setRoleId(Integer roleId) {
+	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
 	}
 

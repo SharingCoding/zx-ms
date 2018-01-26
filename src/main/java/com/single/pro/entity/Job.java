@@ -1,7 +1,5 @@
 package com.single.pro.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
-import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
@@ -12,7 +10,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author SiZhongxia
- * @since 2018-01-08
+ * @since 2018-01-25
  */
 @TableName("sp_job")
 public class Job implements Serializable {
@@ -22,8 +20,7 @@ public class Job implements Serializable {
     /**
      * 主键ID
      */
-	@TableId(value="id", type= IdType.AUTO)
-	private Integer id;
+	private Long id;
     /**
      * 任务ID
      */
@@ -38,7 +35,7 @@ public class Job implements Serializable {
      * 所在组
      */
 	@TableField("group_id")
-	private Integer groupId;
+	private Long groupId;
     /**
      * 任务状态
      */
@@ -78,11 +75,11 @@ public class Job implements Serializable {
 	private Long updateTime;
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -102,11 +99,11 @@ public class Job implements Serializable {
 		this.jobName = jobName;
 	}
 
-	public Integer getGroupId() {
+	public Long getGroupId() {
 		return groupId;
 	}
 
-	public void setGroupId(Integer groupId) {
+	public void setGroupId(Long groupId) {
 		this.groupId = groupId;
 	}
 
